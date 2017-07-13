@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.MainActivity">
+
+    <item
+        android:id="@+id/action_option1"
+        android:title="@string/cardMenu1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_option2"
+        android:title="@string/cardMenu2"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_option3"
+        android:title="@string/cardMenu3"
+        app:showAsAction="never" />
+</menu>
+

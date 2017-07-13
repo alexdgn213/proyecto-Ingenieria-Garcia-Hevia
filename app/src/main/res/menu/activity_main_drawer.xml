@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/todas"
+            android:icon="@drawable/varios"
+            android:title="Todas las Subastas" />
+        <item
+            android:id="@+id/categorias"
+            android:icon="@drawable/ir"
+            android:title="Categorias" />
+        <item
+            android:id="@+id/vistas"
+            android:icon="@drawable/me_gusta"
+            android:title="Mas Vistas" />
+        <item
+            android:id="@+id/favoritas"
+            android:icon="@drawable/favorito"
+            android:title="Favoritas" />
+        <item
+            android:id="@+id/misSubastas"
+            android:icon="@drawable/libros"
+            android:title="Mis Subastas" />
+    </group>
+
+    <item android:title="Opciones">
+        <menu>
+            <item
+                android:id="@+id/configuracion"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Configuracion" />
+            <item
+                android:id="@+id/salir"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Cerrar Sesion" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item android:drawable="@drawable/adjudicado0001" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0002" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0003" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0004" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0005" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0006" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0007" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0008" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0009" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0010" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0011" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0012" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0013" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0014" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0015" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0016" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0017" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0018" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0019" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0020" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0021" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0022" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0023" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0024" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0025" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0026" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0027" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0028" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0029" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0030" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0031" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0032" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0033" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0034" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0035" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0036" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0037" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0038" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0039" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0040" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0041" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0042" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0043" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0044" android:duration="40" />
+    <item android:drawable="@drawable/adjudicado0045" android:duration="40" />
+</animation-list>

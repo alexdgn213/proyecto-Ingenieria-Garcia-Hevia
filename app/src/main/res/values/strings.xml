@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Subastas Online</string>
+
+    <string name="navigation_drawer_open">Abrir navegador</string>
+    <string name="navigation_drawer_close">Cerrar navegador</string>
+
+    <string name="action_settings">Configuracion</string>
+
+    <string name="cardMenu1">hola</string>
+    <string name="cardMenu2">hola</string>
+    <string name="cardMenu3">hola</string>
+
+    <string name="usuario">Usuario</string>
+    <string name="contra">Contraseña</string>
+    <string name="iniciarSecion">Iniciar Sesion</string>
+    <string name="inicio">Inicio</string>
+    <string name="title_activity_subasta">Subasta</string>
+
+    <string name="categoria1">Electronica</string>
+    <string name="categoria2">Inmuebles</string>
+    <string name="categoria3">Hogar</string>
+    <string name="categoria4">Vehiculos</string>
+    <string name="categoria5">Libros</string>
+    <string name="categoria6">Arte</string>
+    <string name="categoria7">Varios</string>
+
+    <string name="moneda">$</string>
+    <string name="vInicial">Valor Inicial:</string>
+    <string name="pMinima">Postura Minima:</string>
+
+    <string name="emptyState">No hay nada para mostrar</string>
+    <string name="mensaje_error_postura">La postura debe ser mayor a la ultima postura realizada</string>
+    <string name="mensaje_postura_vacia">No se ha ingresado ninguna postura</string>
+    <string name="no_martillero">No eres martillero en esta subasta</string>
+    <string name="es_vendedor">Como vendedor solo puedes ver posturas</string>
+    <string name="subastaPausada">Esta subasta fue pausada por el martillero</string>
+    <string name="mensaje_subasta_pausada">La subasta ha sido pausada</string>
+    <string name="mensaje_subasta_renaudada">La subasta ha sido renaudada</string>
+    <string name="postulacion">Te has postulado a esta subasta</string>
+    <string name="quitarPostulacion">Ya no estas postulado a esta subasta</string>
+    <string name="usuarioSuspendido">No puedes inscribirte en una nueva subasta mientras estas suspendido</string>
+
+
+    <string name="estado">Estado:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="hora">Hora:</string>
+    <string name="vendedor">Vendedor:</string>
+    <string name="martillero">Martillero:</string>
+    <string name="precio">Precio:</string>
+    <string name="posturaMinima">Postura Minima:</string>
+
+    <string name="postularse">Postularse</string>
+    <string name="salirse">Salirse</string>
+    <string name="cambiarFase">Cambiar fase</string>
+    <string name="suspender">Suspender</string>
+    <string name="adjudicado">Adjudicado</string>
+    <string name="finalizado">Finalizado</string>
+    <string name="noPostulado">Debes postularte a una subasta para poder realizar posturas</string>
+    <string name="estadoFinalizada">Esta subasta ya ha finalizado</string>
+    <string name="ingresaPostura">Ingresa tu postura</string>
+
+
+    <string name="title_activity_pantalla_multimedia">Multimedia</string>
+
+</resources>
