@@ -32,31 +32,7 @@ public class IniciarDatos {
             Realm.getDefaultInstance().commitTransaction();
         }
         try{
-            iniciarPosturas();
-        }
-        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
-            Realm.getDefaultInstance().commitTransaction();
-        }
-        try{
             iniciarImagenes();
-        }
-        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
-            Realm.getDefaultInstance().commitTransaction();
-        }
-        try{
-            iniciarPostulaciones();
-        }
-        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
-            Realm.getDefaultInstance().commitTransaction();
-        }
-        try{
-            iniciarLikes();
-        }
-        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
-            Realm.getDefaultInstance().commitTransaction();
-        }
-        try{
-            iniciarFavoritos();
         }
         catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
             Realm.getDefaultInstance().commitTransaction();
@@ -145,22 +121,6 @@ public class IniciarDatos {
         servicioImagen.crearImagen(R.drawable.cafetera2,"Imagen 1","Cafetera Oster");
     }
 
-
-    public void iniciarPosturas(){
-        ServicioPostura servicioPostura= new ServicioPostura(Realm.getDefaultInstance());
-        //servicioPostura.eliminarTodasPosturas();
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor1",250);
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor2",300);
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor1",350);
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor2",400);
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor1",450);
-        servicioPostura.crearPostura("Laptop Hp Pavilion G4","postor2",500);
-        servicioPostura.crearPostura("Toyota Hilux","postor2",4500);
-        servicioPostura.crearPostura("Toyota Hilux","postor1",5000);
-        servicioPostura.crearPostura("Toyota Hilux","postor3",5500);
-
-    }
-
     public void iniciarUsuarioActual(){
         ServicioUsuarioActual servicioUsuarioActual = new ServicioUsuarioActual(Realm.getDefaultInstance());
         servicioUsuarioActual.crearUsuario();
@@ -169,28 +129,4 @@ public class IniciarDatos {
 
     }
 
-    public void iniciarPostulaciones(){
-        ServicioPostulacion servicioPostulacion = new ServicioPostulacion(Realm.getDefaultInstance());
-        //servicioPostulacion.eliminarTodasPostulaciones();
-        servicioPostulacion.crearPostulacion("postor1","Laptop Hp Pavilion G4");
-        servicioPostulacion.crearPostulacion("postor1","Toyota Hilux");
-        servicioPostulacion.crearPostulacion("postor2","Laptop Hp Pavilion G4");
-        servicioPostulacion.crearPostulacion("postor2","Toyota Hilux");
-        servicioPostulacion.crearPostulacion("postor3","Toyota Hilux");
-    }
-
-    public void iniciarLikes(){
-        ServicioLike servicioLike = new ServicioLike(Realm.getDefaultInstance());
-        //servicioLike.eliminarTodosLikes();
-        servicioLike.crearLike("Matt Everlast","postor1");
-        servicioLike.crearLike("Laptop Hp Pavilion G4","postor1");
-    }
-
-    public void iniciarFavoritos(){
-        ServicioFavorito servicioFavorito = new ServicioFavorito(Realm.getDefaultInstance());
-        //servicioFavorito.eliminarTodosFavoritos();
-        servicioFavorito.crearFavorito("Matt Everlast","postor1");
-        servicioFavorito.crearFavorito("Cafetera Oster","postor1");
-
-    }
 }
