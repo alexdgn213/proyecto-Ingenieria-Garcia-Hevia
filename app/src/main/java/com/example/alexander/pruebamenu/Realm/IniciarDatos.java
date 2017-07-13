@@ -87,6 +87,7 @@ public class IniciarDatos {
         servicioSubasta.crearSubasta("Chevrolet Optra","Optra chevrolet año 2007, 30.000km, AA, Radio con AUX, cauchos nuevos","Venezuela","La Guaira","vendedor2","martillero2","21/08/2017","7:00am","7:00pm","Virtual","Vehiculos","EnCurso",80,2000,85);
         servicioSubasta.crearSubasta("Libro 100 años de soledad","Del conocido autor Gabriel Garcia Marques, un clásico 100 años de soledad. Portada dura","Venezuela","Caracas","vendedor2","martillero2","03/08/2017","2:00am","4:00pm","Virtual","Libros","Finalizada",1,15,85);
         servicioSubasta.crearSubasta("Cafetera Oster","Cafetera marca oster con reloj incorporado, programable. Color negro","Venezuela","Caracas","vendedor2","martillero2","10/07/2017","9:00am","12:00pm","Virtual","Hogar","Publicidad",3,20,85);
+        
     }
 
     public void iniciarImagenes(){
@@ -109,6 +110,27 @@ public class IniciarDatos {
         servicioImagen.crearImagen(R.drawable.camioneta3,"Imagen 3","Toyota Hilux");
         servicioImagen.crearImagen(R.drawable.camioneta4,"Imagen 4","Toyota Hilux");
         servicioImagen.crearImagen(R.drawable.camioneta5,"Imagen 5","Toyota Hilux");
+        servicioImagen.crearImagen(R.drawable.mattPrincipal,"Imagen Principal","Matt Everlast");
+        servicioImagen.crearImagen(R.drawable.matt1,"Imagen 1","Matt Everlast");
+        servicioImagen.crearImagen(R.drawable.matt2,"Imagen 2","Matt Everlast");
+        servicioImagen.crearImagen(R.drawable.matt3,"Imagen 3","Matt Everlast");
+        servicioImagen.crearImagen(R.drawable.mesacomputadora,"Imagen Principal","Mesa para computadora");
+        servicioImagen.crearImagen(R.drawable.mesacomputadora2,"Imagen 2","Mesa para computadora");
+        servicioImagen.crearImagen(R.drawable.Librodivergente,"Imagen Principal","Libro Divergente");
+        servicioImagen.crearImagen(R.drawable.librodivergente2,"Imagen 2","Libro Divergente");
+        servicioImagen.crearImagen(R.drawable.librodivergente3,"Imagen 3","Libro Divergente");
+        servicioImagen.crearImagen(R.drawable.librodivergente4,"Imagen 4","Libro Divergente");
+        servicioImagen.crearImagen(R.drawable.pinceles,"Imagen Principal","Juego de pinceles SOLITA");
+        servicioImagen.crearImagen(R.drawable.pinceles2,"Imagen 1","Juego de pinceles SOLITA");
+        servicioImagen.crearImagen(R.drawable.ollas,"Imagen Principal","Juego de ollas");
+        servicioImagen.crearImagen(R.drawable.ollas2,"Imagen 1","Juego de ollas");
+        servicioImagen.crearImagen(R.drawable.chevroletoptra,"Imagen Principal","Chevrolet Optra");
+        servicioImagen.crearImagen(R.drawable.chevroletoptra2,"Imagen 1","Chevrolet Optra");
+        servicioImagen.crearImagen(R.drawable.chevroletoptra3,"Imagen 2","Chevrolet Optra");
+        servicioImagen.crearImagen(R.drawable.librocien,"Imagen Principal","Libro 100 años de soledad");
+        servicioImagen.crearImagen(R.drawable.librocien2,"Imagen 1","Libro 100 años de soledad");
+        servicioImagen.crearImagen(R.drawable.cafetera,"Imagen Principal","Cafetera Oster");
+        servicioImagen.crearImagen(R.drawable.cafetera2,"Imagen 1","Cafetera Oster");
     }
 
 
