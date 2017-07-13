@@ -1,4 +1,4 @@
-Proyecto de Ingeniera del Software
+Proyecto de Ingeniera del Software hecho por Alexander Garcia y Veronica Hevia
 
 Aplicacion de subastas en android
 
