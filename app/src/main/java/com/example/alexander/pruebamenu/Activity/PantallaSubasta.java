@@ -94,6 +94,7 @@ public class PantallaSubasta extends AppCompatActivity {
         TextView vendedor = (TextView) findViewById(R.id.vendedorSubasta);
         TextView precio = (TextView) findViewById(R.id.precioSubasta);
         TextView posturaMinima = (TextView) findViewById(R.id.posturaMinimaSubasta);
+        TextView descripcion = (TextView) findViewById(R.id.descripcionSubasta);
 
         //Cambiar el contenido de los contenedores a lo que dice la subasta
         titulo.setText(subasta.getTitulo());
@@ -106,6 +107,7 @@ public class PantallaSubasta extends AppCompatActivity {
         posturaMinima.setText(String.valueOf(subasta.getPosturaMinima()));
         AppBarLayout barra = (AppBarLayout) findViewById(R.id.app_bar_Subasta);
         barra.setBackgroundResource(subasta.getImagenPrincipal());
+        descripcion.setText(subasta.getDescripcion());
 
         //Mostrar todas las imagenes de la subasta
         listaImagenes = subasta.getImagenes();
