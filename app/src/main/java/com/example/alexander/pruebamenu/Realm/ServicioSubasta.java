@@ -40,7 +40,7 @@ public class ServicioSubasta {
       Parametros: nombre de la categoria
     */
     public List<Subasta> obtenerSubastasCategoria(String categoria){
-        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("categoria",categoria).findAll();
+        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("categoria",categoria).equalTo("fase","Publicidad").or().equalTo("categoria",categoria).equalTo("fase","EnCurso").findAll();
         return Arrays.asList(results.toArray(new Subasta[results.size()]));
     }
 
