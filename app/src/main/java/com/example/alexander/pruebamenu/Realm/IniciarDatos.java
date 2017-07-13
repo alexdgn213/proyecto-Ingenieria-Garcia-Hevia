@@ -62,7 +62,7 @@ public class IniciarDatos {
 
     public void iniciarUsuarios(){
         ServicioUsuario servicioUsuario = new ServicioUsuario(Realm.getDefaultInstance());
-        servicioUsuario.eliminarTodosUsuarios();
+        //servicioUsuario.eliminarTodosUsuarios();
         servicioUsuario.crearUsuario("postor1", "Postor","1","postor1","Venezuela","Caracas","postor1@gmail.com","Postor",R.drawable.p1,false);
         servicioUsuario.crearUsuario("postor2", "Postor","2","postor2","Venezuela","Valencia","postor2@gmail.com","Postor",R.drawable.p2,false);
         servicioUsuario.crearUsuario("postor3", "Postor","3","postor3","Venezuela","La guaira","postor3@gmail.com","Postor",R.drawable.p3,false);
@@ -75,7 +75,7 @@ public class IniciarDatos {
 
     public void iniciarSubastas(){
         ServicioSubasta servicioSubasta = new ServicioSubasta(Realm.getDefaultInstance());
-        servicioSubasta.eliminarTodasSubastas();
+        //servicioSubasta.eliminarTodasSubastas();
         servicioSubasta.crearSubasta("Laptop Hp Pavilion G4","Laptop HP con 4 GB de memoria RAM, procesador i5, tarjeta gráfica de última generación","Venezuela","Caracas","vendedor1","martillero1","13/08/2017","4:00pm","6:00pm","Virtual","Electronica","EnCurso",20,200,78);
         servicioSubasta.crearSubasta("Iphone 5","IPhone 5 de 16GB, colores negro y gris. Cámara frontal de 5Mp y trasera de 16Mp","Venezuela","Caracas","vendedor1","martillero1","15/08/2017","2:00pm","8:00pm","Virtual","Electronica","Publicidad",10,300,100);
         servicioSubasta.crearSubasta("Toyota Hilux","Camioneta 4x4, motor de 8000 caballos de fuerza, ideal para terrenos rocosos","Venezuela","Caracas","vendedor2","martillero2","21/08/2017","10:00am","8:00pm","Virtual","Vehiculos","Finalizada",100,4000,85);
@@ -92,7 +92,7 @@ public class IniciarDatos {
 
     public void iniciarImagenes(){
         ServicioImagen servicioImagen = new ServicioImagen(Realm.getDefaultInstance());
-        servicioImagen.eliminarTodasImagenes();
+        //servicioImagen.eliminarTodasImagenes();
         servicioImagen.crearImagen(R.drawable.laptop,"Imagen principal","Laptop Hp Pavilion G4");
         servicioImagen.crearImagen(R.drawable.laptop2,"Imagen 2","Laptop Hp Pavilion G4");
         servicioImagen.crearImagen(R.drawable.laptop3,"Imagen 3","Laptop Hp Pavilion G4");

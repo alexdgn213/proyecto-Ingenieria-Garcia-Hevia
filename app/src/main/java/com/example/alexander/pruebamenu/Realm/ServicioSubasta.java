@@ -32,7 +32,7 @@ public class ServicioSubasta {
     /*Descripcion general: Devuelve una lista con todas las subastas en las faces de: publicidad,enCurso y finalizada
     */
     public List<Subasta> obtenerSubastasParaMostrar(){
-        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("fase","Publicidad").or().equalTo("fase","EnCurso").or().equalTo("fase","Finalizada").findAll();
+        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("fase","Publicidad").or().equalTo("fase","EnCurso").findAll();
         return Arrays.asList(results.toArray(new Subasta[results.size()]));
     }
 
@@ -74,7 +74,7 @@ public class ServicioSubasta {
     /*Descripcion general: Devuelve una lista con todas las subastas ordenadas por likes
     */
     public List<Subasta> obtenerSubastasPorLikes(){
-        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("fase","Publicidad").or().equalTo("fase","EnCurso").or().equalTo("fase","Finalizada").findAll();
+        RealmResults<Subasta> results = realm.where(Subasta.class).equalTo("fase","Publicidad").or().equalTo("fase","EnCurso").findAll();
         results = results.sort("likes", Sort.DESCENDING);
         return Arrays.asList(results.toArray(new Subasta[results.size()]));
     }

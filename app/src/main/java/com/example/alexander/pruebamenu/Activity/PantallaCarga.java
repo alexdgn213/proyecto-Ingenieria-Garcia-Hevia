@@ -60,7 +60,7 @@ public class PantallaCarga extends AppCompatActivity {
         Realm.init(this);
         //CofigurarRealm
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
-                .name("configuracionRealm4")
+                .name("configuracionRealm5")
                 .schemaVersion(1)
                 .build();
         Realm.setDefaultConfiguration(realmConfiguration);
