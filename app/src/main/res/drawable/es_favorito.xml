@@ -4,7 +4,11 @@
     android:viewportHeight="24"
     android:width="24dp"
     android:height="24dp">
-    <path
-        android:pathData="M9 11.3L12.71 14 11.29 9.64 15 7 10.45 7 9 2.5 7.55 7 3 7 6.71 9.64 5.29 14Z"
-        android:fillColor="#000000" />
+    <group
+        android:translateX="197"
+        android:translateY="-139">
+        <path
+            android:pathData="M-185 141l-2.8 6.6 -7.2 0.6 5.5 4.8 -1.7 7 6.2 -3.7 6.2 3.7 -1.7 -7 5.5 -4.8 -7.2 -0.6z"
+            android:fillColor="#000000" />
+    </group>
 </vector>
