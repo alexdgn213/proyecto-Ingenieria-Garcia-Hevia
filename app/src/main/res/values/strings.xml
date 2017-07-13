@@ -39,6 +39,7 @@
     <string name="postulacion">Te has postulado a esta subasta</string>
     <string name="quitarPostulacion">Ya no estas postulado a esta subasta</string>
     <string name="usuarioSuspendido">No puedes inscribirte en una nueva subasta mientras estas suspendido</string>
+    <string name="mensaje_usuario_vacio">No se ha ingresado ningun postor</string>
 
 
     <string name="estado">Estado:</string>

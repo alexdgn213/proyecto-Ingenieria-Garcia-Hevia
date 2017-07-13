@@ -55,10 +55,11 @@ public class PantallaPosturas extends AppCompatActivity {
     TextView valorMinimo; // Contenedor con el valor minimo de la posturas
     TextView valorInicial; // Contenedor con el valor inicial de la subastas
     EditText nuevoValor; // Contenedor con el valor de la nueva postura
+    EditText nuevoValorMartillero; // Contenedor con el valor de la nueva postura
     ConstraintLayout pantallaPostor; // Contenedor con los elementos necesarios para hacer una postura
     ConstraintLayout pantallaObservador; // Contenedor para aquellos que no pueden realizar posturas
     ConstraintLayout pantallaAnimacion; //Contenedor con una animacion para cuando esta finalizada una subasta
-    ConstraintLayout pantallaMartillero; //
+    ConstraintLayout pantallaMartillero; //Contenedor para realizar posturas siendo martillero
     FloatingActionButton fvPausar; //Boton para pausar o renaudar una subasta
     private AnimationDrawable frameAnimationAdjudicado; //Animacion
     ImageView animacion; // Contenedor de la animacion
@@ -85,6 +86,7 @@ public class PantallaPosturas extends AppCompatActivity {
         textoObservador = (TextView) findViewById(R.id.mensajePostura);
         fvPausar = (FloatingActionButton) findViewById(R.id.fAPausar);
         nuevoValor = (EditText) findViewById(R.id.NuevaPostura);
+        nuevoValorMartillero = (EditText) findViewById(R.id.NuevaPosturaMartillero);
         spinnerPostulados = (Spinner) findViewById(R.id.spinnerUsuarios);
 
         //Iniciar los servicios
@@ -136,30 +138,29 @@ public class PantallaPosturas extends AppCompatActivity {
     }
 
     /*
-    Descripcion general: Agrega una postura siempre y cuando sea valida
+    Descripcion general: Valida una postura y la carga de ser correcta
+    Parametros: el valor de la postura y el nombre del usuario
     */
-    public void agregarPostura(View v){
-        String nuevo = nuevoValor.getText().toString();
+    public void comprobarPostura(String postura, String nombreUsuario){
         Postura mejorPostura = servicioPostura.obtenerMejorPostura(subasta.getTitulo()); // mejor postura hasta ahora
         //Verifico que se haya ingresado un valor
-        if(nuevo.length()>0){
-            int valor = Integer.parseInt(nuevo);
+        if(postura.length()>0){
+            int valor = Integer.parseInt(postura);
             //Verifico que existan posturas
             if(mejorPostura!=null) {
                 //Verifico que el valor ingresado sea mayor al exigido
                 if (valor >= mejorPostura.getValor() + subasta.getPosturaMinima()) {
-                    servicioPostura.crearPostura(subasta.getTitulo(), user.getUsuario(), valor);
+                    servicioPostura.crearPostura(subasta.getTitulo(), nombreUsuario, valor);
                     posturas = subasta.getPosturas();
                     cargarPosturas();
                 }else{
                     Toast.makeText(this,R.string.mensaje_error_postura,Toast.LENGTH_SHORT).show();
-
                 }
             }
             else{
-                //Verifico que el valor ingresado es mayo al exigido
+                //Verifico que el valor ingresado es mayor al exigido
                 if (valor >= subasta.getValorInicial()) {
-                    servicioPostura.crearPostura(subasta.getTitulo(), user.getUsuario(), valor);
+                    servicioPostura.crearPostura(subasta.getTitulo(), nombreUsuario, valor);
                     posturas = subasta.getPosturas();
                     cargarPosturas();
                 }
@@ -169,6 +170,29 @@ public class PantallaPosturas extends AppCompatActivity {
             Toast.makeText(this,R.string.mensaje_postura_vacia,Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    /*
+    Descripcion general: agrega una postura hecha por un usuario
+    */
+    public void agregarPostura(View v){
+        String nuevo = nuevoValor.getText().toString();
+        comprobarPostura(nuevo,user.getUsuario());
+    }
+
+    /*
+    Descripcion general: agrega una postura hecha por un martillero
+    */
+    public void agregarPosturaMartillero(View v){
+        String nuevo = nuevoValorMartillero.getText().toString();
+        Object p = spinnerPostulados.getSelectedItem();
+        if (p!=null){
+            String nombreUsuario = spinnerPostulados.getSelectedItem().toString();
+            comprobarPostura(nuevo,nombreUsuario);
+        }
+        else{
+            Toast.makeText(this,R.string.mensaje_usuario_vacio,Toast.LENGTH_SHORT).show();
+        }
     }
 
     /*
