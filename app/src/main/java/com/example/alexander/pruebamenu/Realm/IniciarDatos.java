@@ -14,13 +14,13 @@ public class IniciarDatos {
     public IniciarDatos() {
         //reiniciar();
         try{
-            iniciarUsuarioActual();
+            iniciarUsuarios();
         }
         catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
             Realm.getDefaultInstance().commitTransaction();
         }
         try{
-            iniciarUsuarios();
+            iniciarUsuarioActual();
         }
         catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
             Realm.getDefaultInstance().commitTransaction();
@@ -45,6 +45,18 @@ public class IniciarDatos {
         }
         try{
             iniciarPostulaciones();
+        }
+        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
+            Realm.getDefaultInstance().commitTransaction();
+        }
+        try{
+            iniciarLikes();
+        }
+        catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
+            Realm.getDefaultInstance().commitTransaction();
+        }
+        try{
+            iniciarFavoritos();
         }
         catch (io.realm.exceptions.RealmPrimaryKeyConstraintException e){
             Realm.getDefaultInstance().commitTransaction();
@@ -78,15 +90,15 @@ public class IniciarDatos {
         //servicioSubasta.eliminarTodasSubastas();
         servicioSubasta.crearSubasta("Laptop Hp Pavilion G4","Laptop HP con 4 GB de memoria RAM, procesador i5, tarjeta gráfica de última generación","Venezuela","Caracas","vendedor1","martillero1","13/08/2017","4:00pm","6:00pm","Virtual","Electronica","EnCurso",20,200,78);
         servicioSubasta.crearSubasta("Iphone 5","IPhone 5 de 16GB, colores negro y gris. Cámara frontal de 5Mp y trasera de 16Mp","Venezuela","Caracas","vendedor1","martillero1","15/08/2017","2:00pm","8:00pm","Virtual","Electronica","Publicidad",10,300,100);
-        servicioSubasta.crearSubasta("Toyota Hilux","Camioneta 4x4, motor de 8000 caballos de fuerza, ideal para terrenos rocosos","Venezuela","Caracas","vendedor2","martillero2","21/08/2017","10:00am","8:00pm","Virtual","Vehiculos","Finalizada",100,4000,85);
-        servicioSubasta.crearSubasta("Matt Everlast","Perfecto para hacer yoga, pilates o ejercicios en casa, mas colores disponibles","Venezuela","Valencia","vendedor1","martillero2","29/07/2017","9:00am","8:00pm","Virtual","Varios","Publicidad",10,80,85);
-        servicioSubasta.crearSubasta("Mesa para computadora","Mesa para computadora color caoba, perfecta para estudiar. Adaptable con gavetas","Venezuela","Caracas","vendedor2","martillero1","21/08/2017","11:00am","5:00pm","Virtual","Hogar","Finalizada",40,600,85);
-        servicioSubasta.crearSubasta("Libro Divergente","1era parte de la trilogia del la best seller Veronica Roth, Divergente. Carátula dura. Idioma: Inglés","Venezuela","Caracas","vendedor2","martillero2","21/07/2017","07:00am","11:00am","Virtual","Libros","Finalizada",2,20,85);
-        servicioSubasta.crearSubasta("Juego de pinceles SOLITA","Juego de 10 pinceles ideales para pintar con acuarela, pintadedos. Super resistentes, de hebra gruesa","Venezuela","Maracaibo","vendedor2","martillero2","21/08/2017","1:00pm","3:00pm","Virtual","Arte","Finalizada",1,15,85);
-        servicioSubasta.crearSubasta("Juego de ollas","Juego de ollas de todos los tamaños antiadeherentes marca TRAKI","Venezuela","San Cristobal","vendedor2","martillero2","22/08/2017","2:00pm","6:00pm","Virtual","Hogar","Finalizada",10,80,85);
-        servicioSubasta.crearSubasta("Chevrolet Optra","Optra chevrolet año 2007, 30.000km, AA, Radio con AUX, cauchos nuevos","Venezuela","La Guaira","vendedor2","martillero2","21/08/2017","7:00am","7:00pm","Virtual","Vehiculos","EnCurso",80,2000,85);
-        servicioSubasta.crearSubasta("Libro 100 años de soledad","Del conocido autor Gabriel Garcia Marques, un clásico 100 años de soledad. Portada dura","Venezuela","Caracas","vendedor2","martillero1","03/08/2017","2:00am","4:00pm","Virtual","Libros","Finalizada",1,15,85);
-        servicioSubasta.crearSubasta("Cafetera Oster","Cafetera marca oster con reloj incorporado, programable. Color negro","Venezuela","Caracas","vendedor1","martillero2","10/07/2017","9:00am","12:00pm","Virtual","Hogar","Publicidad",3,20,85);
+        servicioSubasta.crearSubasta("Toyota Hilux","Camioneta 4x4, motor de 8000 caballos de fuerza, ideal para terrenos rocosos","Venezuela","Caracas","vendedor2","martillero2","21/08/2017","10:00am","8:00pm","Virtual","Vehiculos","Finalizada",100,4000,25);
+        servicioSubasta.crearSubasta("Matt Everlast","Perfecto para hacer yoga, pilates o ejercicios en casa, mas colores disponibles","Venezuela","Valencia","vendedor1","martillero2","29/07/2017","9:00am","8:00pm","Virtual","Varios","Publicidad",10,80,55);
+        servicioSubasta.crearSubasta("Mesa para computadora","Mesa para computadora color caoba, perfecta para estudiar. Adaptable con gavetas","Venezuela","Caracas","vendedor2","martillero1","21/08/2017","11:00am","5:00pm","Virtual","Hogar","Finalizada",40,600,5);
+        servicioSubasta.crearSubasta("Libro Divergente","1era parte de la trilogia del la best seller Veronica Roth, Divergente. Carátula dura. Idioma: Inglés","Venezuela","Caracas","vendedor2","martillero2","21/07/2017","07:00am","11:00am","Virtual","Libros","Inactiva",2,20,0);
+        servicioSubasta.crearSubasta("Juego de pinceles SOLITA","Juego de 10 pinceles ideales para pintar con acuarela, pintadedos. Super resistentes, de hebra gruesa","Venezuela","Maracaibo","vendedor2","martillero2","21/08/2017","1:00pm","3:00pm","Virtual","Arte","Finalizada",1,15,43);
+        servicioSubasta.crearSubasta("Juego de ollas","Juego de ollas de todos los tamaños antiadeherentes marca TRAKI","Venezuela","San Cristobal","vendedor2","martillero2","22/08/2017","2:00pm","6:00pm","Virtual","Hogar","Finalizada",10,80,300);
+        servicioSubasta.crearSubasta("Chevrolet Optra","Optra chevrolet año 2007, 30.000km, AA, Radio con AUX, cauchos nuevos","Venezuela","La Guaira","vendedor2","martillero2","21/08/2017","7:00am","7:00pm","Virtual","Vehiculos","EnCurso",80,2000,150);
+        servicioSubasta.crearSubasta("Libro 100 años de soledad","Del conocido autor Gabriel Garcia Marques, un clásico 100 años de soledad. Portada dura","Venezuela","Caracas","vendedor2","martillero1","03/08/2017","2:00am","4:00pm","Virtual","Libros","Suspendida",1,15,5);
+        servicioSubasta.crearSubasta("Cafetera Oster","Cafetera marca oster con reloj incorporado, programable. Color negro","Venezuela","Caracas","vendedor1","martillero2","10/07/2017","9:00am","12:00pm","Virtual","Hogar","EnCurso",3,20,51);
         
     }
 
@@ -152,6 +164,8 @@ public class IniciarDatos {
     public void iniciarUsuarioActual(){
         ServicioUsuarioActual servicioUsuarioActual = new ServicioUsuarioActual(Realm.getDefaultInstance());
         servicioUsuarioActual.crearUsuario();
+        ServicioUsuario servicioUsuario = new ServicioUsuario(Realm.getDefaultInstance());
+        servicioUsuarioActual.iniciarSesion(servicioUsuario.obtenerUsuarioPorUsuario("postor1"));
 
     }
 
@@ -160,5 +174,23 @@ public class IniciarDatos {
         //servicioPostulacion.eliminarTodasPostulaciones();
         servicioPostulacion.crearPostulacion("postor1","Laptop Hp Pavilion G4");
         servicioPostulacion.crearPostulacion("postor1","Toyota Hilux");
+        servicioPostulacion.crearPostulacion("postor2","Laptop Hp Pavilion G4");
+        servicioPostulacion.crearPostulacion("postor2","Toyota Hilux");
+        servicioPostulacion.crearPostulacion("postor3","Toyota Hilux");
+    }
+
+    public void iniciarLikes(){
+        ServicioLike servicioLike = new ServicioLike(Realm.getDefaultInstance());
+        //servicioLike.eliminarTodosLikes();
+        servicioLike.crearLike("Matt Everlast","postor1");
+        servicioLike.crearLike("Laptop Hp Pavilion G4","postor1");
+    }
+
+    public void iniciarFavoritos(){
+        ServicioFavorito servicioFavorito = new ServicioFavorito(Realm.getDefaultInstance());
+        //servicioFavorito.eliminarTodosFavoritos();
+        servicioFavorito.crearFavorito("Matt Everlast","postor1");
+        servicioFavorito.crearFavorito("Cafetera Oster","postor1");
+
     }
 }
