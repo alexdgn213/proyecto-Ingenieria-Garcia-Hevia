@@ -18,11 +18,13 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alexander.pruebamenu.Adapter.EmptyStateRVAdapter;
 import com.example.alexander.pruebamenu.Adapter.PosturaRVAdapter;
+import com.example.alexander.pruebamenu.Model.Postulacion;
 import com.example.alexander.pruebamenu.Model.Postura;
 import com.example.alexander.pruebamenu.Model.Subasta;
 import com.example.alexander.pruebamenu.Model.UsuarioActual;
@@ -62,6 +64,7 @@ public class PantallaPosturas extends AppCompatActivity {
     ImageView animacion; // Contenedor de la animacion
     TextView textoAnimacion; // Contenedor del texto de la animacion
     TextView textoObservador; // Contenedor del mensaje por el que el usuario no puede hacer posturas
+    Spinner spinnerPostulados; //Contenedor de todos los usuarios postulados
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,7 @@ public class PantallaPosturas extends AppCompatActivity {
         textoObservador = (TextView) findViewById(R.id.mensajePostura);
         fvPausar = (FloatingActionButton) findViewById(R.id.fAPausar);
         nuevoValor = (EditText) findViewById(R.id.NuevaPostura);
+        spinnerPostulados = (Spinner) findViewById(R.id.spinnerUsuarios);
 
         //Iniciar los servicios
         servicioPostura = new ServicioPostura(Realm.getDefaultInstance());
@@ -122,6 +126,13 @@ public class PantallaPosturas extends AppCompatActivity {
         //Modificar el boton de pausar/renaudar concorde al estado de la subasta
         if(subasta.isPausada()) fvPausar.setImageResource(R.drawable.renaudar);
         else fvPausar.setImageResource(R.drawable.pausar);
+
+        //Cargo en el spinner la lista con todos los postulados
+        List<Postulacion> postulados = servicioPostulacion.obtenerPostulacionSubasta(subasta.getTitulo());
+        ArrayAdapter spinner_adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, postulados);
+        spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPostulados.setAdapter(spinner_adapter);
+
     }
 
     /*

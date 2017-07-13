@@ -62,7 +62,7 @@ public class IniciarDatos {
 
     public void iniciarUsuarios(){
         ServicioUsuario servicioUsuario = new ServicioUsuario(Realm.getDefaultInstance());
-        servicioUsuario.eliminarTodosUsuarios();
+        //servicioUsuario.eliminarTodosUsuarios();
         servicioUsuario.crearUsuario("postor1", "Postor","1","postor1","Venezuela","Caracas","postor1@gmail.com","Postor",R.drawable.p1,false);
         servicioUsuario.crearUsuario("postor2", "Postor","2","postor2","Venezuela","Valencia","postor2@gmail.com","Postor",R.drawable.p2,false);
         servicioUsuario.crearUsuario("postor3", "Postor","3","postor3","Venezuela","La guaira","postor3@gmail.com","Postor",R.drawable.p3,false);
@@ -92,7 +92,7 @@ public class IniciarDatos {
 
     public void iniciarImagenes(){
         ServicioImagen servicioImagen = new ServicioImagen(Realm.getDefaultInstance());
-        servicioImagen.eliminarTodasImagenes();
+        //servicioImagen.eliminarTodasImagenes();
         servicioImagen.crearImagen(R.drawable.laptop,"Imagen principal","Laptop Hp Pavilion G4");
         servicioImagen.crearImagen(R.drawable.laptop2,"Imagen 2","Laptop Hp Pavilion G4");
         servicioImagen.crearImagen(R.drawable.laptop3,"Imagen 3","Laptop Hp Pavilion G4");

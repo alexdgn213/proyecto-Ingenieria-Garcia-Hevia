@@ -46,4 +46,9 @@ public class Postulacion extends RealmObject{
     public void setSubasta(String subasta) {
         this.subasta = subasta;
     }
+
+    @Override
+    public String toString(){
+        return this.usuario;
+    }
 }
