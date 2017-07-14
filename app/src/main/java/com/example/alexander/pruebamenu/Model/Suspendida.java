@@ -30,7 +30,7 @@ public class Suspendida implements EstadoFase {
     }
 
     @Override
-    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion) {
+    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, ConstraintLayout lmatrillero, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion) {
 
     }
 

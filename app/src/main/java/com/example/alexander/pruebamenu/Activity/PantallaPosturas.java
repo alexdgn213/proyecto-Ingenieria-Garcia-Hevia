@@ -119,15 +119,16 @@ public class PantallaPosturas extends AppCompatActivity {
         //Trabajar con la estrategia del usuario
         user.pantallaPostura(rvPosturas,fvPausar,pantallaObservador,pantallaMartillero,pantallaPostor,textoObservador,subasta.isPausada(),subasta.getMartillero().equals(user.getUsuario())||servicioPostulacion.estaPostuladoUsuario(user.getUsuario(),subasta.getTitulo()));
 
-        //Trabajar con el estado de la subasta
-        Postura mejorPostura = servicioPostura.obtenerMejorPostura(subasta.getTitulo());//Se busca la mayor postura
-        if(mejorPostura!=null) {
-            subasta.pantallaPostura(pantallaObservador, textoObservador, pantallaAnimacion, pantallaPostor, mejorPostura.getPostor().equals(user.getUsuario()), frameAnimationAdjudicado, animacion, textoAnimacion);
-        }
 
         //Modificar el boton de pausar/renaudar concorde al estado de la subasta
         if(subasta.isPausada()) fvPausar.setImageResource(R.drawable.renaudar);
         else fvPausar.setImageResource(R.drawable.pausar);
+
+        //Trabajar con el estado de la subasta
+        Postura mejorPostura = servicioPostura.obtenerMejorPostura(subasta.getTitulo());//Se busca la mayor postura
+        if(mejorPostura!=null) {
+            subasta.pantallaPostura(pantallaObservador, textoObservador, pantallaAnimacion, pantallaPostor, pantallaMartillero, mejorPostura.getPostor().equals(user.getUsuario()), frameAnimationAdjudicado, animacion, textoAnimacion);
+        }
 
         //Cargo en el spinner la lista con todos los postulados
         List<Postulacion> postulados = servicioPostulacion.obtenerPostulacionSubasta(subasta.getTitulo());

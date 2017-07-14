@@ -17,7 +17,7 @@ import com.example.alexander.pruebamenu.Realm.ServicioSubasta;
 public interface EstadoFase {
 
     public void mostrarOcultarSubasta(FloatingActionButton acceder, Button postularse, Button cambiarFase, Button suspender);
-    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion,TextView textoAnimacion);
+    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, ConstraintLayout lmatrillero, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion,TextView textoAnimacion);
     public void cambiarFase(Subasta s, ServicioSubasta servicioSubasta);
     public void suspender(Subasta s, ServicioSubasta servicioSubasta);
 

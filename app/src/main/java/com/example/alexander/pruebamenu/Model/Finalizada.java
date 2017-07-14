@@ -38,9 +38,10 @@ public class Finalizada implements EstadoFase{
                 si el usuario gano la subasta o false si perdio o no participo
     */
     @Override
-    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion) {
+    public void mostrarOcultarPosturas(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, ConstraintLayout lmatrillero, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion) {
         lmensaje.setVisibility(View.VISIBLE);
         lpostura.setVisibility(View.GONE);
+        lmatrillero.setVisibility(View.GONE);
         mensaje.setText(R.string.estadoFinalizada);
         fondoAnimacion.setVisibility(View.VISIBLE);
         //Compruebo si el usuario gano

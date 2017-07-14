@@ -264,9 +264,9 @@ public class Subasta extends RealmObject{
 
     /*Descripcion general: Delega las funciones de mostrar/ocultar a su fase actual(Patron estado)
    */
-    public void pantallaPostura(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion){
+    public void pantallaPostura(ConstraintLayout lmensaje, TextView mensaje, ConstraintLayout fondoAnimacion, ConstraintLayout lpostura, ConstraintLayout lmartillero, boolean gano, AnimationDrawable animacion, ImageView imagenAnimacion, TextView textoAnimacion){
         generarFase();
-        faseActual.mostrarOcultarPosturas(lmensaje, mensaje, fondoAnimacion, lpostura, gano, animacion, imagenAnimacion, textoAnimacion);
+        faseActual.mostrarOcultarPosturas(lmensaje, mensaje, fondoAnimacion, lpostura, lpostura, gano, animacion, imagenAnimacion, textoAnimacion);
     }
 
     /*Descripcion general: Delega la funcion de cambiar fase a su fase actual(Patron estado)
