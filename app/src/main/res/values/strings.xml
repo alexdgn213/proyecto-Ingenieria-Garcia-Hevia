@@ -30,6 +30,7 @@
 
     <string name="emptyState">No hay nada para mostrar</string>
     <string name="mensaje_error_postura">La postura debe ser mayor a la ultima postura realizada</string>
+    <string name="mensaje_error_postura_primera">La postura debe ser mayor al valor inicial</string>
     <string name="mensaje_postura_vacia">No se ha ingresado ninguna postura</string>
     <string name="no_martillero">No eres martillero en esta subasta</string>
     <string name="es_vendedor">Como vendedor solo puedes ver posturas</string>

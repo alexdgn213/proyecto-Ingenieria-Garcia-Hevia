@@ -159,10 +159,13 @@ public class PantallaPosturas extends AppCompatActivity {
             }
             else{
                 //Verifico que el valor ingresado es mayor al exigido
-                if (valor >= subasta.getValorInicial()) {
+                if (valor >= subasta.getValorInicial()+subasta.getPosturaMinima()) {
                     servicioPostura.crearPostura(subasta.getTitulo(), nombreUsuario, valor);
                     posturas = subasta.getPosturas();
                     cargarPosturas();
+                }
+                else{
+                    Toast.makeText(this,R.string.mensaje_error_postura_primera,Toast.LENGTH_SHORT).show();
                 }
             }
         }
