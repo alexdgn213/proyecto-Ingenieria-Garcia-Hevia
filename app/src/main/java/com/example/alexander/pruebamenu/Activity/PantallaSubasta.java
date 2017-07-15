@@ -6,12 +6,10 @@ Descripcion general: Actividad que permite ver en detalle una subasta, postulars
                      la fase en la que se encuentre y el usuario logueado
 */
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -23,7 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alexander.pruebamenu.Adapter.ImageRVAdapter;
-import com.example.alexander.pruebamenu.Model.EnCurso;
 import com.example.alexander.pruebamenu.Model.Imagen;
 import com.example.alexander.pruebamenu.Model.Subasta;
 import com.example.alexander.pruebamenu.Model.UsuarioActual;

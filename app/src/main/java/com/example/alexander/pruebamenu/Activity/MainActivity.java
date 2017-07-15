@@ -27,9 +27,9 @@ import android.widget.TextView;
 
 import com.example.alexander.pruebamenu.Adapter.EmptyStateRVAdapter;
 import com.example.alexander.pruebamenu.Model.UsuarioActual;
-import com.example.alexander.pruebamenu.R;
 import com.example.alexander.pruebamenu.Adapter.RVAdapter;
 import com.example.alexander.pruebamenu.Model.Subasta;
+import com.example.alexander.pruebamenu.R;
 import com.example.alexander.pruebamenu.Realm.ServicioFavorito;
 import com.example.alexander.pruebamenu.Realm.ServicioLike;
 import com.example.alexander.pruebamenu.Realm.ServicioSubasta;

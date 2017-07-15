@@ -99,9 +99,6 @@
                 android:backgroundTintMode="src_over"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:pointerIcon="@android:color/white"
-                android:singleLine="true"
-                android:soundEffectsEnabled="false"
                 android:textColor="@color/cardview_light_background" />
 
             <TextView
